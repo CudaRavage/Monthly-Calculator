@@ -54,6 +54,7 @@ namespace Vehicle_Cost_Calculator
             }
 
             txtMonthly.Text = Convert.ToString(Calculate(price, down, apr, term));
+
    
         }  
 
@@ -66,8 +67,8 @@ namespace Vehicle_Cost_Calculator
             first = _apr * first;
             second = second - 1;
             double monthly = (first / second) * netPrice;
-            
-            return monthly;
+
+            return Math.Round(monthly, 2);
         }
     }
 }
